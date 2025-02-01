@@ -2,8 +2,8 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { MenuService } from './service/menu-service';
-import { MenuItem } from '../shared/models/menu-item.model';
+import { MenuService } from '@app/core/services/menu-service';
+import { MenuItem } from '@app/shared/models/menu-item.model';
 
 @Component({
   selector: 'app-nav-header',

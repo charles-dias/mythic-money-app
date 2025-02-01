@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { NavHeaderComponent } from './nav-header/nav-header.component';
-import { HomeComponent } from './home/home.component';
+import { NavHeaderComponent } from '@app/nav-header/nav-header.component';
+import { HomeComponent } from '@app/home/home.component';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,4 @@ import { HomeComponent } from './home/home.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
-  
-}
+export class AppComponent {}

@@ -4,8 +4,8 @@ import {
   AppRoutes,
   MenuItem,
   ValidRoute,
-} from '../../shared/models/menu-item.model';
-import { routes } from '../../app.routes';
+} from '@app/shared/models/menu-item.model';
+import { routes } from '@app/app.routes';
 
 @Injectable({
   providedIn: 'root',

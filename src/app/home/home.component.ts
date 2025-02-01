@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { WidgetComponent } from '../widget/widget.component';
+import { WidgetComponent } from '@app/widget/widget.component';
 
 @Component({
   selector: 'app-home',
