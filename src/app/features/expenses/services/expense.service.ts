@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Expense } from '@shared/interfaces/expense.interface';
+import { Expense, Limit } from '@shared/interfaces/expense.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -53,5 +53,32 @@ export class ExpenseService {
     console.log('Expenses:', this.expenses);
 
     return of(this.expenses);
+  }
+
+  getLimit(): Observable<Limit[]> {
+    const data: Limit[] = [
+      {
+        id: '1',
+        name: 'Daily',
+        type: 'dailyLimit',
+        value: 200.12,
+      },
+      {
+        id: '2',
+        name: 'Weekly',
+        type: 'weeklyLimit',
+        value: 500.0,
+      },
+      {
+        id: '3',
+        name: 'Total',
+        type: 'totalLimit',
+        value: 2000.0,
+      },
+    ];
+
+    console.log('Limits:', data);
+
+    return of(data);
   }
 }

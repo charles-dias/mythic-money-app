@@ -1,0 +1,11 @@
+.dailyLimit {
+  @apply text-green-600;
+}
+
+.weeklyLimit {
+  @apply text-blue-600;
+}
+
+.totalLimit {
+  @apply text-purple-600;
+}

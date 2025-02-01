@@ -1,17 +1,13 @@
-<!-- Esse componente ocupa toda a tela e organiza o conteúdo em coluna -->
 <form
   [formGroup]="expenseForm"
   (ngSubmit)="onSubmit()"
-  class="h-screen flex flex-col bg-white-100 overflow-hidden"
+  class="h-screen justify-center flex flex-col bg-white-100 overflow-hidden"
 >
-  <!-- Card com os campos de entrada (alinhado ao topo e centralizado horizontalmente) -->
   <div class="mx-auto mt-16 w-full max-w-md bg-white rounded-lg shadow-md p-6">
     <h2 class="text-2xl font-bold text-center">New Expense</h2>
     <hr class="mt-5 mb-7 mx-9" />
 
-    <!-- Área dos campos do formulário -->
     <div class="space-y-4">
-      <!-- Campo Description -->
       <div>
         <label for="name" class="block text-sm font-medium text-gray-700 mb-1">
           Description
@@ -28,7 +24,6 @@
         </span>
       </div>
 
-      <!-- Campo Date -->
       <div>
         <label for="date" class="block text-sm font-medium text-gray-700 mb-1">
           Date
@@ -41,7 +36,6 @@
         />
       </div>
 
-      <!-- Campo Cost -->
       <div>
         <label
           for="amount"
@@ -67,7 +61,6 @@
     </div>
   </div>
 
-  <!-- Botão de submit posicionado no final da página -->
   <div class="mt-auto px-4 pb-4">
     <button
       type="submit"

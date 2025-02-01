@@ -4,3 +4,10 @@ export interface Expense {
   date: Date;
   cost: number;
 }
+
+export interface Limit {
+  id?: string;
+  value: number;
+  name: string;
+  type: string;
+}

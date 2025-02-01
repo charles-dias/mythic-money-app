@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 import { ExpenseService } from '@app/features/expenses/services/expense.service';
 import { WidgetData } from '@app/shared/interfaces/widget.interface';
 import { WidgetComponent } from '@shared/components/widget/components/widget.component';
-import { Expense } from '@shared/interfaces/expense.interface';
+import { Expense, Limit } from '@shared/interfaces/expense.interface';
 
 @Component({
   selector: 'app-home',
@@ -18,12 +18,12 @@ export class HomeComponent implements OnInit {
   constructor(private expenseService: ExpenseService) {}
 
   ngOnInit(): void {
-    this.expenseService.getExpenses().subscribe({
-      next: (expenses: Expense[]) => {
+    this.expenseService.getLimit().subscribe({
+      next: (expenses: Limit[]) => {
         this.widgetData = expenses.map((expense) => ({
-          value: expense.cost,
+          value: expense.value,
           label: expense.name,
-          type: 'expense',
+          type: expense.type,
         }));
       },
       error: (error) => console.error('Erro ao buscar despesas:', error),
