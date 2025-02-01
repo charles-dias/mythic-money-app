@@ -1,1 +1,24 @@
-<app-widget [data]="widgetData" />
+<!-- Container principal com altura da tela e sem scroll -->
+<div class="h-screen overflow-hidden relative">
+  <!-- Conteúdo abaixo da navbar (usando padding-top para compensar a altura da navbar) -->
+  <div class="pt-16 flex flex-col h-full">
+    <!-- Área principal -->
+    <main class="flex-grow p-6">
+      <h1 class="text-3xl font-bold text-center">Expense Report</h1>
+      <hr class="mx-9 mt-5 mb-7" />
+      <app-widget [data]="widgetData" />
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-100 p-4 text-center">© 2025 - Meu Aplicativo</footer>
+  </div>
+</div>
+
+<!-- Botão flutuante redondo no canto inferior direito -->
+<a
+  routerLink="/expenses/new"
+  class="fixed bottom-20 right-5 bg-green-600 hover:bg-green-700 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg"
+  title="Nova Despesa"
+>
+  <span class="text-2xl">+</span>
+</a>

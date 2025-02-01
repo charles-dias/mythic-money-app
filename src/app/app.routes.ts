@@ -1,7 +1,5 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from '@features/home/components/home.component';
-import { WidgetComponent } from '@features/widget/components/widget.component';
-import { AppComponent } from '@app/app.component';
 import { ExpenseFormComponent } from './features/expenses/components/expense-form/expense-form.component';
 
 export const routes: Routes = [

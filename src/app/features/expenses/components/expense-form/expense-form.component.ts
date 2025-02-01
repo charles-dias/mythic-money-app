@@ -48,17 +48,21 @@ export class ExpenseFormComponent {
   }
 
   onSubmit(): void {
-    if (this.expenseForm.valid) {
-      const formValue = this.expenseForm.value;
-
-      const expense = {
-        name: formValue.name,
-        date: new Date(formValue.date),
-        amount: formValue.amount,
-      };
-
-      console.log('Despesa a ser salva:', expense);
-      // Aqui você chamaria seu serviço para salvar a despesa
+    // Se o formulário estiver inválido, marca todos os controles como touched para exibir os erros
+    if (this.expenseForm.invalid) {
+      this.expenseForm.markAllAsTouched();
+      return;
     }
+
+    const formValue = this.expenseForm.value;
+
+    const expense = {
+      name: formValue.name,
+      date: new Date(formValue.date),
+      amount: formValue.amount,
+    };
+
+    console.log('Despesa a ser salva:', expense);
+    // Aqui você chamaria seu serviço para salvar a despesa
   }
 }
