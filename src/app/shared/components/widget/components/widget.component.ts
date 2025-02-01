@@ -1,11 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-
-interface WidgetData {
-  value: number;
-  label: string;
-  type: string;
-}
+import { WidgetData } from '@app/shared/interfaces/widget.interface';
 
 @Component({
   selector: 'app-widget',
