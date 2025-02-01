@@ -1,6 +1,7 @@
 // features/expenses/components/expense-form/expense-form.component.ts
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router, RouterModule } from '@angular/router';
 import {
   FormBuilder,
   FormGroup,
@@ -17,7 +18,7 @@ import {
 export class ExpenseFormComponent {
   expenseForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) {
     this.expenseForm = this.fb.group({
       name: ['', [Validators.required]],
       date: [new Date().toISOString().split('T')[0], [Validators.required]],
@@ -64,5 +65,7 @@ export class ExpenseFormComponent {
 
     console.log('Despesa a ser salva:', expense);
     // Aqui você chamaria seu serviço para salvar a despesa
+
+    this.router.navigate(['/home']);
   }
 }

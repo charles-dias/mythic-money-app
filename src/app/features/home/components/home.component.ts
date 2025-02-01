@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { WidgetComponent } from '@shared/components/widget/components/widget.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [WidgetComponent],
+  imports: [WidgetComponent, RouterModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
