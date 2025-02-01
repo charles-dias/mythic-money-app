@@ -15,14 +15,18 @@ export class MenuService {
           route.path !== '**' &&
           route.path !== ''
       )
-      .map((route) => `/${route.path}` as AppRoutes);
+      .sort((a, b) => (a.data?.['order'] || 0) - (b.data?.['order'] || 0))
+      .map((route) => ({
+        label: route.data?.['label'] || this.formatLabel(route.path),
+        route: `/${route.path}` as AppRoutes,
+        icon: route.data?.['icon'],
+      }));
 
-    return validRoutes.map((route) => ({
-      label: this.formatLabel(route),
-      route,
-    }));
+    return validRoutes;
   }
 
+  // Seu método formatLabel atual continua o mesmo,
+  // mas agora só será usado quando não houver label customizado
   private formatLabel(route: string): string {
     return route
       .replace('/', '')
