@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { MenuService } from '@app/core/services/menu-service';
-import { MenuItem } from '@app/shared/models/menu-item.model';
+import { MenuItem } from '@app/shared/interfaces/menu-interface';
 
 @Component({
   selector: 'app-nav-header',

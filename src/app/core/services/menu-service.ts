@@ -1,11 +1,7 @@
-// Optional: Create a service to manage menu items
 import { Injectable } from '@angular/core';
-import {
-  AppRoutes,
-  MenuItem,
-  ValidRoute,
-} from '@app/shared/models/menu-item.model';
+import { MenuItem } from '@shared/interfaces/menu-interface';
 import { routes } from '@app/app.routes';
+import { AppRoutes, ValidRoute } from '@shared/types/routes.types';
 
 @Injectable({
   providedIn: 'root',
